@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <firstname>Билл</firstname>
+        <lastname>Гейтс</lastname>
+        <birthdate>1955-10-28</birthdate>
+        <groupId>JD26</groupId>
+        <books>
+            <book>
+                <title>Дорога в будущее</title>
+                <author>Билл Гейтс</author>
+                <releaseDate>1995-11-01</releaseDate>
+                <countPages>286</countPages>
+            </book>
+            <book>
+                <title>Бизнес со скоростью мысли</title>
+                <author>Билл Гейтс</author>
+                <releaseDate>1999-03-01</releaseDate>
+                <countPages>480</countPages>
+            </book>
+            <book>
+                <title>Чистый код</title>
+                <author>Роберт Мартин</author>
+                <releaseDate>2008-08-11</releaseDate>
+                <countPages>464</countPages>
+            </book>
+            <book>
+                <title>Совершенный код</title>
+                <author>Стив Макконнелл</author>
+                <releaseDate>2004-06-07</releaseDate>
+                <countPages>896</countPages>
+            </book>
+            <book>
+                <title>Алгоритмы. Построение и анализ</title>
+                <author>Томас Кормен</author>
+                <releaseDate>2009-07-31</releaseDate>
+                <countPages>1296</countPages>
+            </book>
+        </books>
+    </student>
+
+    <student>
+        <firstname>Стив</firstname>
+        <lastname>Джобс</lastname>
+        <birthdate>1955-02-24</birthdate>
+        <groupId>JD26</groupId>
+        <books>
+            <book>
+                <title>Стив Джобс</title>
+                <author>Уолтер Айзексон</author>
+                <releaseDate>2011-10-24</releaseDate>
+                <countPages>656</countPages>
+            </book>
+            <book>
+                <title>Икона. Стив Джобс</title>
+                <author>Джеффри Янг</author>
+                <releaseDate>2005-04-01</releaseDate>
+                <countPages>420</countPages>
+            </book>
+            <book>
+                <title>Маленькая книга про UI</title>
+                <author>Джон Маэда</author>
+                <releaseDate>1999-05-15</releaseDate>
+                <countPages>150</countPages>
+            </book>
+            <book>
+                <title>Дизайн привычных вещей</title>
+                <author>Дональд Норман</author>
+                <releaseDate>2013-11-05</releaseDate>
+                <countPages>344</countPages>
+            </book>
+            <book>
+                <title>Дзен и искусство ухода за мотоциклом</title>
+                <author>Роберт Пирсиг</author>
+                <releaseDate>1974-04-15</releaseDate>
+                <countPages>420</countPages>
+            </book>
+        </books>
+    </student>
+
+    <student>
+        <firstname>Джон</firstname>
+        <lastname>Кармак</lastname>
+        <birthdate>1970-08-20</birthdate>
+        <groupId>JD26</groupId>
+        <books>
+            <book>
+                <title>Повелители DOOM</title>
+                <author>Дэвид Кушнер</author>
+                <releaseDate>2003-05-13</releaseDate>
+                <countPages>336</countPages>
+            </book>
+            <book>
+                <title>Программирование графики</title>
+                <author>Джон Кармак</author>
+                <releaseDate>1996-02-10</releaseDate>
+                <countPages>500</countPages>
+            </book>
+            <book>
+                <title>Архитектура игровых движков</title>
+                <author>Джейсон Грегори</author>
+                <releaseDate>2009-06-15</releaseDate>
+                <countPages>800</countPages>
+            </book>
+            <book>
+                <title>Математика для 3D графики</title>
+                <author>Эрик Ленгьел</author>
+                <releaseDate>2011-02-22</releaseDate>
+                <countPages>520</countPages>
+            </book>
+            <book>
+                <title>Искусственный интеллект для игр</title>
+                <author>Ян Миллингтон</author>
+                <releaseDate>2006-10-18</releaseDate>
+                <countPages>450</countPages>
+            </book>
+        </books>
+    </student>
+
+    <student>
+        <firstname>Бьёрн</firstname>
+        <lastname>Страуструп</lastname>
+        <birthdate>1950-12-30</birthdate>
+        <groupId>JD26</groupId>
+        <books>
+            <book>
+                <title>Язык программирования C++</title>
+                <author>Бьёрн Страуструп</author>
+                <releaseDate>1985-10-14</releaseDate>
+                <countPages>1020</countPages>
+            </book>
+            <book>
+                <title>Программирование. Принципы и практика с использованием C++</title>
+                <author>Бьёрн Страуструп</author>
+                <releaseDate>2008-12-25</releaseDate>
+                <countPages>1200</countPages>
+            </book>
+            <book>
+                <title>Дизайн и эволюция C++</title>
+                <author>Бьёрн Страуструп</author>
+                <releaseDate>1994-03-20</releaseDate>
+                <countPages>528</countPages>
+            </book>
+            <book>
+                <title>Эффективное использование C++</title>
+                <author>Скотт Мейерс</author>
+                <releaseDate>1992-04-01</releaseDate>
+                <countPages>300</countPages>
+            </book>
+            <book>
+                <title>Современное проектирование на C++</title>
+                <author>Андрей Александреску</author>
+                <releaseDate>2001-02-01</releaseDate>
+                <countPages>416</countPages>
+            </book>
+        </books>
+    </student>
+
+    <student>
+        <firstname>Линус</firstname>
+        <lastname>Торвальдс</lastname>
+        <birthdate>1969-12-28</birthdate>
+        <groupId>JD26</groupId>
+        <books>
+            <book>
+                <title>Ради удовольствия. Рассказ об отце Linux</title>
+                <author>Линус Торвальдс</author>
+                <releaseDate>2001-05-08</releaseDate>
+                <countPages>320</countPages>
+            </book>
+            <book>
+                <title>Ядро Linux. Описание разработки</title>
+                <author>Роберт Лав</author>
+                <releaseDate>2010-06-22</releaseDate>
+                <countPages>496</countPages>
+            </book>
+            <book>
+                <title>Грокаем алгоритмы</title>
+                <author>Адитья Бхаргава</author>
+                <releaseDate>2016-05-01</releaseDate>
+                <countPages>288</countPages>
+            </book>
+            <book>
+                <title>Git. Практическое руководство</title>
+                <author>Скотт Чакон</author>
+                <releaseDate>2009-08-21</releaseDate>
+                <countPages>450</countPages>
+            </book>
+            <book>
+                <title>Архитектура компьютера</title>
+                <author>Эндрю Таненбаум</author>
+                <releaseDate>1984-01-01</releaseDate>
+                <countPages>848</countPages>
+            </book>
+        </books>
+    </student>
+
+    <student>
+        <firstname>Джеймс</firstname>
+        <lastname>Гослинг</lastname>
+        <birthdate>1955-05-19</birthdate>
+        <groupId>JD26</groupId>
+        <books>
+            <book>
+                <title>Язык программирования Java</title>
+                <author>Джеймс Гослинг</author>
+                <releaseDate>1996-05-23</releaseDate>
+                <countPages>620</countPages>
+            </book>
+            <book>
+                <title>Java. Эффективное программирование</title>
+                <author>Джошуа Блох</author>
+                <releaseDate>2001-01-05</releaseDate>
+                <countPages>460</countPages>
+            </book>
+            <book>
+                <title>Философия Java</title>
+                <author>Брюс Эккель</author>
+                <releaseDate>2006-02-20</releaseDate>
+                <countPages>1200</countPages>
+            </book>
+            <book>
+                <title>Java. Руководство для начинающих</title>
+                <author>Герберт Шилдт</author>
+                <releaseDate>2014-10-15</releaseDate>
+                <countPages>720</countPages>
+            </book>
+            <book>
+                <title>Шаблоны проектирования</title>
+                <author>Эрик Фримен</author>
+                <releaseDate>2004-10-25</releaseDate>
+                <countPages>650</countPages>
+            </book>
+            <book>
+                <title>Рефакторинг. Улучшение проекта существующего кода</title>
+                <author>Мартин Фаулер</author>
+                <releaseDate>1999-07-08</releaseDate>
+                <countPages>448</countPages>
+            </book>
+            <book>
+                <title>Разработка программного обеспечения</title>
+                <author>Кент Бек</author>
+                <releaseDate>2000-10-03</releaseDate>
+                <countPages>224</countPages>
+            </book>
+        </books>
+    </student>
+</students>
