@@ -17,6 +17,107 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
+        task8();
+        task9();
+        task10();
+    }
+
+    private static void task10() {
+        System.out.println("Task10");
+        List<String> list = Arrays.asList("a1", "b2", "c3", "a1");
+
+        // Получение списка без дубликатов
+        System.out.println(list.stream()
+                .distinct()
+                .collect(Collectors.toList()));
+        // Получить массив строк без дубликатов и в верхнем регистре
+        System.out.println(list.stream()
+                .distinct()
+                // .map(s -> s.toUpperCase())
+                .map(String::toUpperCase)
+                .collect(Collectors.toList()));
+        // Объединить все элементы в одну строку через разделитель: и обернуть тегами
+        // <b>… </b>
+        System.out.println(list.stream()
+                .collect(Collectors.joining(": ", "<b>", "</b>")));
+        // Преобразовать в map, где первый символ ключ, второй символ значение
+        System.out.println(list.stream()
+                .distinct()
+                .collect(Collectors.toMap(s -> s.substring(0, 1), s -> s.substring(1, 2))));
+        // Преобразовать в map, сгруппировав по первому символу строки
+        System.out.println(list.stream()
+                .collect(Collectors.groupingBy(s -> s.substring(0, 1))));
+        // Преобразовать в map, сгруппировав по первому символу строки и объединим
+        // вторые символы через :
+        System.out.println(list.stream()
+                .collect(Collectors.groupingBy(s -> s.substring(0, 1),
+                        Collectors.mapping(p -> p.substring(1, 2), Collectors.joining(":")))));
+
+    }
+
+    private static void task9() {
+        System.out.println("Task9");
+        List<Integer> list = Arrays.asList(1, 2, 3, 4);
+        // Получить сумму нечетных чисел
+        System.out.println(list.stream()
+                .collect(Collectors.summarizingInt(p -> p % 2 == 1 ? p : 0)));
+        // Вычесть от каждого элемента 1 и получить среднее
+        System.out.println(list.stream()
+                .collect(Collectors.averagingInt(p -> p - 1)));
+        // Прибавить к числам 3 и получить статистику
+        System.out.println(list.stream()
+                .collect(Collectors.summarizingInt(p -> p + 3)));
+        // Разделить числа на четные и нечетные
+        System.out.println(list.stream()
+                .collect(Collectors.partitioningBy(p -> p % 2 == 0)));
+    }
+
+    private static void task8() {
+        System.out.println("Task8");
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 2);
+        // Получить сумму чисел или вернуть 0
+        Integer sum = list.stream()
+                .reduce((a, s) -> a + s)
+                .orElse(0);
+        System.out.println(sum);
+        // Вернуть максимум или -1
+        Integer max = list.stream()
+                .reduce(Integer::max)
+                .orElse(-1);
+        System.out.println(max);
+        // Вернуть сумму нечетных чисел или 0
+        Integer sum1 = list.stream()
+                .filter(d -> d % 2 != 0)
+                .reduce(Integer::sum)
+                .orElse(0);
+        System.out.println(sum1);
+    }
+
+    private static void task7() {
+        System.out.println("Task7");
+        List<String> list = Arrays.asList("a1", "a2", "a3", "a1");
+        List<People> peoples = List.of(new People("Вася", 16, Sex.MAN),
+                new People("Петя", 23, Sex.MAN),
+                new People("Елена", 42, Sex.WOMAN),
+                new People("Иван Иванович", 69, Sex.MAN));
+
+        // Найти максимальное значение среди коллекции строк
+        System.out.println(list.stream()
+                .max(String::compareTo)
+                .get());
+        // Найти минимальное значение среди коллекции строк
+        System.out.println(list.stream()
+                .min(String::compareTo)
+                .get());
+        // Найдем человека с максимальным возрастом
+        System.out.println(peoples.stream()
+                .max(Comparator.comparing(People::getAge))
+                .get());
+        // Найдем человека с минимальным возрастом
+        System.out.println(peoples.stream()
+                .min(Comparator.comparing(People::getAge))
+                .get());
     }
 
     private static void task6() {
