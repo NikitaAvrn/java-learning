@@ -16,21 +16,26 @@ import com.homework.Strategy.PowerDrive;
 
 public class Main {
     public static void main(String[] args) {
-        // strategyPattern();
-        // chainOfResponsibilityPattern();
+        strategyPattern();
+        chainOfResponsibilityPattern();
         builderPattern();
     }
 
     private static void builderPattern() {
-        MadMaxCar car = new MadMaxCar.Builder("Багги", "V8 QuatroTurbo")
+        MadMaxCar madMaxCar = new MadMaxCar.Builder("Багги", "V8 QuatroTurbo")
                 .setArmor(28)
                 .installNitro()
                 .addWeapon("Пушка ШВАК 20мм")
-                .addWeapon("Пушка ШВАК 20мм")
-                .addWeapon("Пулемет 12мм")
                 .addWeapon("Пулемет 12мм")
                 .build();
-        System.out.println(car);
+        MadMaxCar truck = new MadMaxCar.Builder("Камаз 53410", "Ядерный реактор")
+                .setArmor(45)
+                .addWeapon("Две циркулярные пилы")
+                .addWeapon("Огнемёт")
+                .build();
+
+        System.out.println(madMaxCar);
+        System.out.println(truck);
     }
 
     private static void chainOfResponsibilityPattern() {
