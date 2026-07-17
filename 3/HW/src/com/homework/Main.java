@@ -3,6 +3,7 @@ package com.homework;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.homework.Builder.MadMaxCar;
 import com.homework.ChainOfResponsibility.BubbleWrapRobot;
 import com.homework.ChainOfResponsibility.LabelRobot;
 import com.homework.ChainOfResponsibility.Parcel;
@@ -15,8 +16,21 @@ import com.homework.Strategy.PowerDrive;
 
 public class Main {
     public static void main(String[] args) {
-        strategyPattern();
-        chainOfResponsibilityPattern();
+        // strategyPattern();
+        // chainOfResponsibilityPattern();
+        builderPattern();
+    }
+
+    private static void builderPattern() {
+        MadMaxCar car = new MadMaxCar.Builder("Багги", "V8 QuatroTurbo")
+                .setArmor(28)
+                .installNitro()
+                .addWeapon("Пушка ШВАК 20мм")
+                .addWeapon("Пушка ШВАК 20мм")
+                .addWeapon("Пулемет 12мм")
+                .addWeapon("Пулемет 12мм")
+                .build();
+        System.out.println(car);
     }
 
     private static void chainOfResponsibilityPattern() {
