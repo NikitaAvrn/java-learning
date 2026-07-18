@@ -1,5 +1,6 @@
 package com.homework;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,8 @@ import com.homework.ChainOfResponsibility.LabelRobot;
 import com.homework.ChainOfResponsibility.Parcel;
 import com.homework.ChainOfResponsibility.WarehouseRobot;
 import com.homework.ChainOfResponsibility.WeightControlRobot;
+import com.homework.Proxy.ArtImage;
+import com.homework.Proxy.LazyArtProxy;
 import com.homework.Strategy.DriftDrive;
 import com.homework.Strategy.EcoDrive;
 import com.homework.Strategy.ElectricCar;
@@ -19,6 +22,21 @@ public class Main {
         strategyPattern();
         chainOfResponsibilityPattern();
         builderPattern();
+        proxyPattern();
+    }
+
+    private static void proxyPattern() {
+        ArtImage picture1 = new LazyArtProxy("Кот в сапгах в стиле киберпанка");
+        ArtImage picture2 = new LazyArtProxy("Восход солнца на Марсе");
+
+        System.out.println(LocalDateTime.now());
+        picture1.display();
+
+        System.out.println(LocalDateTime.now());
+        picture1.display();
+
+        // picture2 не использовали - память и процессорное время не использовали
+        System.out.println(picture2);
     }
 
     private static void builderPattern() {
