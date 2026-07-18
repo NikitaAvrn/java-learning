@@ -4,12 +4,19 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.homework.Adapter.CelsiusThermometer;
+import com.homework.Adapter.FahrenheitThermometer;
+import com.homework.Adapter.FahrenheitToCelsiusAdapter;
 import com.homework.Builder.MadMaxCar;
 import com.homework.ChainOfResponsibility.BubbleWrapRobot;
 import com.homework.ChainOfResponsibility.LabelRobot;
 import com.homework.ChainOfResponsibility.Parcel;
 import com.homework.ChainOfResponsibility.WarehouseRobot;
 import com.homework.ChainOfResponsibility.WeightControlRobot;
+import com.homework.Decorator.BayonetDecorator;
+import com.homework.Decorator.RustedRifle;
+import com.homework.Decorator.SilencerDecorator;
+import com.homework.Decorator.Weapon;
 import com.homework.Proxy.ArtImage;
 import com.homework.Proxy.LazyArtProxy;
 import com.homework.Strategy.DriftDrive;
@@ -23,6 +30,35 @@ public class Main {
         chainOfResponsibilityPattern();
         builderPattern();
         proxyPattern();
+        decoratorPattern();
+        adapterPattern();
+    }
+
+    private static void adapterPattern() {
+        FahrenheitThermometer fahrenheitThermometer = new FahrenheitThermometer();
+        CelsiusThermometer celsiusThermometer = new FahrenheitToCelsiusAdapter(fahrenheitThermometer);
+
+        System.out.println("Серия замеров");
+        for (int i = 0; i < 5; i++) {
+            System.out.println(String.format("Замер номер %d", i + 1));
+            double temperature = celsiusThermometer.getCelsiusTemperature();
+            System.out.println(String.format("Температура: %.1f °C%n", temperature));
+        }
+    }
+
+    private static void decoratorPattern() {
+        Weapon myGun = new RustedRifle();
+        System.out.println(myGun);
+        myGun.fire();
+
+        myGun = new SilencerDecorator(myGun);
+        System.out.println(myGun);
+        myGun.fire();
+
+        BayonetDecorator ultraGun = new BayonetDecorator(myGun);
+        System.out.println(ultraGun);
+        ultraGun.fire();
+        ultraGun.meleeAttack();
     }
 
     private static void proxyPattern() {
