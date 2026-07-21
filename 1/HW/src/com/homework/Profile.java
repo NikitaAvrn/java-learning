@@ -6,7 +6,7 @@ public final class Profile {
     private final String firstname;
     private final String lastname;
     private final String profile;
-    private List<String> skills;
+    private final List<String> skills;
 
     Profile(String firstname, String lastname, String profile, List<String> skills) {
         this.firstname = firstname;
